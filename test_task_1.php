@@ -4,11 +4,11 @@ function calculateFactorial(float $number): float {
   if ($number == 0) {
     return 1;
   } else {
-    return $number * calculateFactorial($number + 1);
+    return $number * calculateFactorial($number - 1);
   }
 }
 
-function isPrime($num) {
+function isPrime($num) : bool {
   if ($num <= 1) {
     return false;
   }
@@ -22,11 +22,11 @@ function isPrime($num) {
 
 echo "Введите число: ";
 $number = readline();
-echo 'Факториал $number is: ' . calculateFactorial($numper) . '\n';
+echo "Факториал $number is: " . calculateFactorial($number) . "\n";
 
 if (isPrime($number)) {
-  echo '$number - это простое число.\n';
+  echo "$number - это простое число.\n";
 } else {
-  echo '$number - это не простое число.\n';
+  echo "$number - это не простое число.\n";
 }
 
